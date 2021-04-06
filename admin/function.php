@@ -1,5 +1,6 @@
 <?php
 
+
 function insert_categories()
 {
     global $connection;
@@ -18,6 +19,15 @@ function insert_categories()
                 die('Query Failed' . mysqli_error($connection));
             }
         }
+    }
+}
+
+
+function confirm($result)
+{
+    global $connection;
+    if (!$result) {
+        die("Query FAILED ." . mysqli_error($connection));
     }
 }
 
